@@ -27,3 +27,13 @@ rsync -avzhe ssh --max-size='10k' snap/ root@192.168.1.100:/root/
 6. Tự động xóa dữ liệu nguồn sau khi đồng bộ thành công
 rsync --remove-source-files -zvah .bashrc.bak /tmp/backups/
 
+using dd:
+using full disk: dd if=/dev/sda of=/dev/sdb bs=1M conv=noerror
+restore:	     dd if=/dev/sdb of=/dev/sda bs=1M conv=noerror
+dd if=/dev/sda | gzip -c > /tmp/test.img.gz 
+dd if=/dev/sda | gzip -c | ssh root@ip dd of=img.gz 
+gzip -dc /tmp/test.img.gz | dd of/dev/sda
+ 
+ using tar
+ tar -cvf file or dir full path:
+ tar cvf test.dir ~/Documents/test
