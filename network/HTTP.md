@@ -41,6 +41,7 @@
 	+ 3xx: Dieu huong lai (300 -> 307)
 	+ 4xx: Loi ben client (400 -> 407)
 	+ 5xx: Loi ben server (500 -> 505)
+
 ![](https://images.viblo.asia/8414d386-f4e5-4b9c-aded-d3b379dc7c20.png)
 
 	
