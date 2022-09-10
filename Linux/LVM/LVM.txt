@@ -1,0 +1,5 @@
+LVM cho phép chúng ta có thể thay đổi kích thuớc của phân vùng
+Thực hiện sao lưu nhất quán bằng cách tạo snapshot nhanh các khối một cách hợp lý.
+Mã hóa nhiều phân vùng vật lý bằng một mật khẩu
+
+

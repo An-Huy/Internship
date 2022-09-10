@@ -1,0 +1,32 @@
+- name: install apache, php
+  tags: apache, php
+  ansible.builtin.package:
+    name:
+      - '{{ apache_package }}'
+      - '{{ php_package }}'
+    state: latest
+
+- name: install requirement packages
+  ansible.builtin.apt:
+    name: 
+      - php
+      - php-mysql
+    state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: install requirement packages
+  ansible.builtin.dnf:
+    name:
+      - php-curl
+      - php-zip
+      - php-opcache
+      - php-mysqlnd
+    state: latest
+  when: ansible_distribution == "Rocky"
+
+- name: starts service, if not started
+  tags: always
+  ansible.builtin.service:
+    name: httpd 
+    state: started
+  when: ansible_distribution == "Rocky"

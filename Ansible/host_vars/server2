@@ -1,0 +1,8 @@
+apache_package: httpd
+apache_service: httpd
+php_package:	php
+domain:		server2
+mysql_server: 	mysql-server
+mysql_client:	mysql
+requirement:	python3-PyMySQL
+mysql_service: 	mysqld

@@ -1,0 +1,5 @@
+- name: dis default site on Ubuntu, en virtual site
+  ansible.builtin.shell: |
+    a2dissite 000-default
+    a2ensite server1
+  when: ansible_distribution == "Ubuntu"

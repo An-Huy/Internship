@@ -1,0 +1,5 @@
+- name: restart_service
+  tags: always
+  ansible.builtin.service:
+    name: '{{ apache_service }}'
+    state: restarted

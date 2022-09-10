@@ -1,0 +1,13 @@
+- name: Install mysql
+  tags: mysql
+  ansible.builtin.package:
+    name:
+      - '{{ mysql_server }}'
+      - '{{ mysql_client }}'
+      - '{{ requirement }}'
+    state: latest
+
+- name: Make sure service is running
+  ansible.builtin.service:
+    name: '{{ mysql_service }}'
+    state: started

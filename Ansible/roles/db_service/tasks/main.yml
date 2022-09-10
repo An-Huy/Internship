@@ -1,0 +1,8 @@
+- include_vars:
+    file: sqlpass
+
+- name: install mysql
+  import_tasks: mysql.yml
+
+- name: set mysql's password
+  import_tasks: set_pass.yml

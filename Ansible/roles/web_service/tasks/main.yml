@@ -1,0 +1,9 @@
+- name: Install apcahe, php for webservers
+  import_tasks: apache-php.yml
+
+- name: Copy files, folders for site
+  import_tasks: apache-php-files.yml
+
+- name: dis default site on Ubuntu and en virtual site
+  import_tasks: apache-deb.yml
+  notify: restart_service

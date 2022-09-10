@@ -1,0 +1,8 @@
+apache_package: apache2
+apache_service: apache2
+php_package:	libapache2-mod-php
+domain:		server1
+mysql_server: 	mysql-server
+mysql_client:	mysql-client
+requirement:	python3-pymysql
+mysql_service: 	mysql

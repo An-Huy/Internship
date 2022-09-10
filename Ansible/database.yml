@@ -1,0 +1,22 @@
+---
+
+- hosts: servers
+  become: true
+  remote_user: huy
+  roles:
+    - db_service
+  
+  pre_tasks:
+    - name: upgrade and update repo for Debian's family
+      tags: always
+      ansible.builtin.apt:
+        upgrade: dist
+        update_cache: true
+      when: ansible_distribution == "Ubuntu"
+
+    - name: update for repo for Redhat's family
+      tags: always
+      ansible.builtin.dnf:
+        update_only: yes
+        update_cache: yes
+      when: ansible_distribution == "Rocky"

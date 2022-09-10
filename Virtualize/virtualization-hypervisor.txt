@@ -1,0 +1,6 @@
+Virtualization: ảo hóa cho phép một máy vật lý đơn lẻ có thể tạo thành nhiều máy ảo độc lập
+Hypervisor: là phần mềm giám sát máy ảo
+
+Có 2 loại hypervisor là Native, Host Based
+Native: chạy trực tiếp trên phần cứng như là: KVM, hyper-V, Exsi
+Host-based: được cài đặt trên một máy tính chủ, có một hệ điều hành đã được cài đặt: VMware,   Virtual-box
