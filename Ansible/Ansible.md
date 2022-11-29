@@ -1,4 +1,4 @@
-1. Ansible OCnecpt
+1. Ansible Conecpt
     + Controller Machine: Là máy cài Ansible, chịu trách nhiệm quản, điều khiển và gửi các task đến những máy con cần quản.
     + Inventory: Là file chứa thông tin những server cần quản.
     + Playbook: Là file chứa các task được ghi dưới định dạng YAML. Máy controller sẽ đọc các task này trong Playbook sau đó đẩy các lệnh thực thi tương ứng bằng Python xuống các máy con.
